@@ -104,8 +104,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 7rem 2rem 4rem;
-      max-width: 720px;
+      padding: 7rem 4rem 4rem;
+      max-width: 1200px;
       margin: 0 auto;
     }
     .hero-tag {
@@ -120,10 +120,12 @@
     }
     .hero-name {
       font-family: var(--display);
-      font-size: 3rem;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
       font-weight: 800;
-      line-height: 1.1;
+      line-height: 1.08;
       letter-spacing: -0.03em;
+      max-width: 640px;
+      word-wrap: break-word;
       opacity: 0;
       animation: fadeUp 0.7s ease forwards 0.4s;
     }
@@ -181,9 +183,9 @@
 
     /* ── SECTION SHELL ── */
     .section-wrap {
-      max-width: 720px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 4rem 2rem;
+      padding: 4rem 4rem;
     }
     .section-label {
       font-family: var(--mono);
@@ -195,11 +197,11 @@
     }
     .section-title {
       font-family: var(--display);
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 2rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 1.8rem;
     }
 
     /* ── ABOUT ── */
@@ -439,11 +441,11 @@
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 2rem;
+      padding: 2rem 4rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 720px;
+      max-width: 1200px;
       margin: 0 auto;
     }
     .footer-name {
@@ -472,16 +474,16 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      nav { padding: 0.9rem 1.2rem; }
+      nav { padding: 0.9rem 1.5rem; }
       .nav-links { display: none; }
-      .section-wrap { padding: 3rem 1.2rem; }
-      #hero { padding: 6rem 1.2rem 3rem; }
-      .hero-name { font-size: 2.2rem; }
-      .section-title { font-size: 1.3rem; }
+      .section-wrap { padding: 3rem 1.5rem; }
+      #hero { padding: 6rem 1.5rem 3rem; }
+      .hero-name { font-size: 2rem; max-width: 100%; }
+      .section-title { font-size: 1.2rem; }
       .about-grid, .edu-grid, .skills-grid, .projects-grid, .extras-grid { grid-template-columns: 1fr; }
       .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
       .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
-      footer { padding: 1.5rem 1.2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+      footer { padding: 1.5rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     }
   </style>
 </head>
